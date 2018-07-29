@@ -65,9 +65,9 @@ drop_data_group
 driver_counts = drop_data_group["driver_count"].sum()
 driver_counts
 
-plt.scatter(total_number_rides['Rural'], average_fare['Rural'], marker="o", facecolors="red", edgecolors="black", s=driver_counts['Rural'], label="City Types"+ "\n" +"  Rural", alpha=0.75)
-plt.scatter(total_number_rides['Suburban'], average_fare['Suburban'], marker="o", facecolors="blue", edgecolors="black", s=driver_counts['Suburban'], label="  Suburban", alpha=0.75)
-plt.scatter(total_number_rides['Urban'], average_fare['Urban'], marker="o", facecolors="yellow", edgecolors="black", s=driver_counts['Urban'], label="  Urban", alpha=0.75)
+plt.scatter(total_number_rides['Rural'], average_fare['Rural'], marker="o", facecolors="gold", edgecolors="black", linewidths=0, s=driver_counts['Rural'], label="City Types"+ "\n" +"  Rural", alpha=0.75)
+plt.scatter(total_number_rides['Suburban'], average_fare['Suburban'], marker="o", facecolors="blue", edgecolors="black", linewidths=0, s=driver_counts['Suburban'], label="  Suburban", alpha=0.75)
+plt.scatter(total_number_rides['Urban'], average_fare['Urban'], marker="o", facecolors="coral", edgecolors="black", linewidths=0, s=driver_counts['Urban'], label="  Urban", alpha=0.75)
 plt.grid()
 plt.xlabel("Total Number of Rides (Per City)")
 plt.ylabel("Average Fare(S)")
@@ -94,7 +94,7 @@ citytype_group
 total_fares_citytype = citytype_group["fare"].sum()
 total_fares_citytype
 
-total_fares = total_fares_citytype.plot(kind='pie', colors = ['orange', 'blue', 'red'], autopct="%1.1f%%", explode = (0, 0, 0.1, ), shadow=True, startangle=100)
+total_fares = total_fares_citytype.plot(kind='pie', colors = ['gold', 'blue', 'coral'], autopct="%1.1f%%", explode = (0, 0, 0.1, ), shadow=True, startangle=100)
 
 plt.axis("equal")
 plt.title("Total Fares by City Type")
@@ -114,7 +114,7 @@ plt.tight_layout()
 total_rides_citytype = citytype_group["ride_id"].count()
 total_rides_citytype
 
-total_rides = total_rides_citytype.plot(kind='pie', colors = ['orange', 'blue', 'red'], autopct="%1.1f%%", explode = (0, 0, 0.1, ), shadow=True, startangle=110)
+total_rides = total_rides_citytype.plot(kind='pie', colors = ['gold', 'blue', 'coral'], autopct="%1.1f%%", explode = (0, 0, 0.1, ), shadow=True, startangle=110)
 
 plt.axis("equal")
 plt.title("Total Rides by City Type")
@@ -137,7 +137,7 @@ drop_data_citytype_group
 total_drivers_citytype = drop_data_citytype_group["driver_count"].sum()
 total_drivers_citytype
 
-total_drivers = total_drivers_citytype.plot(kind='pie', colors = ['orange', 'blue', 'red'], autopct="%1.1f%%", explode = (0, 0, 0.1, ), shadow=True, startangle=140)
+total_drivers = total_drivers_citytype.plot(kind='pie', colors = ['gold', 'blue', 'coral'], autopct="%1.1f%%", explode = (0, 0, 0.1, ), shadow=True, startangle=140)
 
 plt.axis("equal")
 plt.title("Total Drivers by City Type")
